@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hanunoo&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <title>MZAR.com</title>
+</head>
+
+<body>
+  <div class="bg-white">
+    <header class="absolute inset-x-0 top-0 z-50">
+      <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div class="flex lg:flex-1">
+          <a href="#" class="-m-1.5 p-1.5">
+            <h1 style="font-size: 24px; font-family: 'REM';">MZAR</h1>
+            <!-- <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt=""> -->
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button id="menu-button" type="button"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+            <span class="sr-only">Open main menu</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a href="home.html" class="text-sm font-semibold leading-6 text-gray-900">Home</a>
+          <a href="page.html" class="text-sm font-semibold leading-6 text-gray-900">Features</a>
+          <a href="container-footer" class="text-sm font-semibold leading-6 text-gray-900">About</a>
+          <a href="container-footer" class="text-sm font-semibold leading-6 text-gray-900">Contact</a>
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a href="index.html" class="text-sm font-semibold leading-6 text-gray-900">Log out <span
+              aria-hidden="true">&rarr;</span></a>
+        </div>
+      </nav>
+      <!-- Mobile menu, show/hide based on menu open state. -->
+      <div id="mobile-menu" class="lg:hidden hidden" role="dialog" aria-modal="true">
+        <div class="fixed inset-0 z-50"></div>
+        <div
+          class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5">
+              <h1 style="font-size: 24px; font-family: 'REM';">MZAR</h1>
+
+              <!-- <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt=""> -->
+            </a>
+            <button id="close-button" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+              <span class="sr-only">Close menu</span>
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/10">
+              <div class="space-y-2 py-6">
+                <a href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Home</a>
+                <a href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Features</a>
+                <a href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">About</a>
+                <a href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact</a>
+              </div>
+              <div class="py-6">
+                <a href="login.html"
+                  class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log
+                  out</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="relative isolate px-6 pt-14 lg:px-8">
+      <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+        aria-hidden="true">
+        <div
+          class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+          style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+        </div>
+      </div>
+      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+          <div
+            class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+            <!-- Announcing our next round of funding. <a href="page.html" class="font-semibold text-indigo-600"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a> -->
+          </div>
+        </div>
+        <div class="text-center">
+          <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">MZAR</h1>
+          <p class="mt-6 text-lg leading-8 text-gray-600">The website is created with the purpose of learning, by
+            providing access to read articles and news that we
+            provide for you to get the latest information and knowledge that you might be able to take from various
+            sources,
+            quite a lot of information that we provide on this website so please select the category you want to access,
+            the
+            available categories may be suitable for you to read, there is technology, science, music, art and in the
+            future
+            we will always update.</p>
+        </div>
+      </div>
+      <div
+        class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+        aria-hidden="true">
+        <div
+          class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+          style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+        </div>
+      </div>
+    </div>
+
+
+    <!-- HEADER END -->
+    <div class="bgimg-2">
+      <div class="caption">
+        <span class="border"
+          style="background-color:transparent;font-size:25px;color: #000000; font-family: 'Noto Sans Hanunoo';">ENJOY</span>
+      </div>
+    </div>
+
+
+    <main style="padding-top: 3rem; padding-bottom: 3rem;">
+      <div id="selectedCategory"></div>
+      <div class="judul">
+        <h1 style="font-size: 34px;">From the blog</h1>
+        <p>Find what you need</p>
+      </div>
+      <div class="dropdown-container">
+        <select id="categorySelect" class="styled-select">
+          <option value="">--Select a Category--</option>
+          <option value="Technology">Technology</option>
+          <option value="Science">Science</option>
+          <option value="Art">Art</option>
+          <option value="Music">Music</option>
+        </select>
+      </div>
+      <div class="container">
+        <article class="card" data-category="Technology">
+          <a href="coming.html">
+            <img
+              src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=3270&amp;q=80"
+              alt="Blog Image">
+            <div class="content2">
+              <time datetime="2024-05-27">May 27, 2024</time>
+              <h2>Article A</h2>
+            </div>
+          </a>
+        </article>
+
+        <article class="card" data-category="Science">
+          <a href="coming.html">
+            <img
+              src="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=3270&amp;q=80"
+              alt="Blog Image">
+            <div class="content2">
+              <time datetime="2024-05-27">May 27, 2024</time>
+              <h2>Article B</h2>
+            </div>
+          </a>
+        </article>
+
+        <article class="card" data-category="Art">
+          <a href="coming.html">
+            <img
+              src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=3603&amp;q=80"
+              alt="Blog Image">
+            <div class="content2">
+              <time datetime="2024-05-27">May 27, 2024</time>
+              <h2>Article C</h2>
+            </div>
+          </a>
+        </article>
+
+        <article class="card" data-category="Music">
+          <a href="coming.html">
+            <img
+              src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2832&amp;q=80"
+              alt="Blog Image">
+            <div class="content2">
+              <time datetime="2024-05-27">May 27, 2024</time>
+              <h2>Article D</h2>
+            </div>
+          </a>
+        </article>
+      </div>
+    </main>
+
+
+
+
+
+
+    <!-- FOOTER -->
+    <div class="bgimg-3">
+      <div class="caption">
+        <span class="border" style="background-color:transparent;font-size:25px;color: #000000;">THANKS</span>
+      </div>
+    </div>
+
+
+    <div class="container-footer">
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="home.html" class="nav-link px-2 text-muted">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contact</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+        </ul>
+        <p class="text-center text-muted">© 2024 Moh Reza, MZAR</p>
+      </footer>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+
+</body>
+
+</html>
